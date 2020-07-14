@@ -1,0 +1,24 @@
+<h1>Movie List</h1>
+
+<ol>
+  <li *ngFor="let x of movieArr" (click)="setMovie(x)"><button>{{x.movieName}}</button></li>
+</ol>
+
+
+<div *ngIf="selectedMovie">
+  <h2>Selected Movie: {{selectedMovie.movieName}}</h2>
+
+  <table border="1">
+    <tr>
+      <th>Country</th>
+      <th>Price</th>
+      <th>Date</th>
+    </tr>
+
+    <tr>
+      <td>USA</td>
+      <td>${{selectedMovie.price}}</td>
+      <td>{{selectedMovie.movieName}}</td>
+    </tr>
+  </table>
+</div>
